@@ -39,3 +39,14 @@ CSV.open("results.csv","w") do |csv|
 		csv << [key,value]
 	end
 end
+
+#na xml uslovieto e da se tursi hardware i se sortva v ASC
+#XML NE SE TABULIRA (pone v moeto uslovie)
+
+File.open("results.xml","w") do |xml|
+	xml.write("<results>\n")
+	count_hash.each do |key,value|
+		xml.write("<#{key}>#{value}</#{key}>\n")
+	end
+	xml.write("</results>")
+end
