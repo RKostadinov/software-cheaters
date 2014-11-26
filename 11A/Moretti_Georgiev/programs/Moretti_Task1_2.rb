@@ -1,5 +1,5 @@
 require 'csv'
-require_relative 'xml_writer.rb'
+require_relative "csv_writer.rb"
 student = Hash.new()
 
 Dir.glob("#{ARGV[0]}/**/*_*_*_*.rb").each do |directory| 
@@ -10,7 +10,7 @@ Dir.glob("#{ARGV[0]}/**/*_*_*_*.rb").each do |directory|
 		student[firstName] = lastName;
 	end
 end
-writer = XMLWriter.new()
+writer = CSVWriter.new()
 
 writer.write(student)
 

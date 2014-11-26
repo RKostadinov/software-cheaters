@@ -13,8 +13,6 @@ class Task1 < Task
 			:in_what_order=>"ASC",
 			:is_odd => "odd",
 			:format => "csv",
-			:expected_result => "firstName1,LastName1\n 
-								 firstName2,lastName2\n",
 			:expected=>
 "
 Atanaska,Ivancheva
@@ -50,24 +48,30 @@ Velislav,Kostov
 		context1_2 = {
 			:task_number=>"1",
 			:more_or_less => "less",
-			:letters=>"5",
+			:letters=>"8",
 			:which_name=>"second",
 			:which_to_sort=>"First name",
 			:in_what_order=>"ASC",
 			:is_odd => "odd",
-			:format => "xml",
-			:expected_result => "firstName1,LastName1\n 
-								 firstName2,lastName2\n",
+			:format => "csv",
 			:expected=>
-"
-<allStudents>
-	<student>
-		<secondName>secondName</secondName>
-	</student>
-	<student>
-		<secondName>secondName</secondName><
-	/student>
-<allStudents>
+"Borislav,Rusinov
+Denis,Stoinev
+Dimitar,Matev
+Emiliqn,Sokolov
+Gergan,Nikolov
+Hristiyan,Dodov
+Hristo,Dachev
+Ivailo,Ivanov
+Ivo,Valchev
+Kaloyan,Nikov
+Kamena,Dacheva
+Konstantin,Kostov
+Marian,Belchev
+Simeon,Shopkin
+Stefan,Radev
+Vanya,Santeva
+Velislav,Kostov
 "
 		}
 		
@@ -79,9 +83,27 @@ Velislav,Kostov
 			:which_to_sort=>"First name",
 			:in_what_order=>"ASC",
 			:is_odd => "even",
-			:format => "json",
+			:format => "csv",
 			:expected=>
 "
+Borislav,Stratev
+David,Georgiev
+Dimitar,Terziev
+Elena,Karakoleva
+Hristiyan,Velyakov
+Ivelin,Slavchev
+Ivo,Stratev
+Kalin,Marinov
+Konstantin,Vekilski
+Krassen,Angelov
+Lili,Kokalova
+Mladen,Karadimov
+Moretti,Georgiev
+Nikola,Marinov
+Radoslav,Kostadinov
+Stanimir,Bogdanov
+Valentin,Varbanov
+
 "
 		}
 		
@@ -90,6 +112,7 @@ Velislav,Kostov
 	end
 	
 	def initialize
-		super 'task1.eruby'
+		taskNumber = 1
+		super 'task1.eruby', taskNumber
 	end
 end

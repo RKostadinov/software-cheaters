@@ -1,13 +1,13 @@
-Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+Develop a program named FirstName_LastName_ClassNumber_1bf13e.rb
 
 1. you are give homework014(class014_homework) folder
 1.1 it should be passed as argument(ARGV[0] for example);
 1.2 if there are other arguments they should be discarded;
 2. file names in this folder are in the form First_Last_class_digits.rb; 
 2.2 if there are other files they should be discarded
-3. find  <%= @what_to_find %>;
-4. Sort the result by <%= @which_to_sort %> <%= @in_what_order %>;
-5. Produce a result in <%= @file_format %> format named results.<%= @file_format %>;
+3. find  all the programs that have flog under 200;
+4. Sort the result by First name ASC;
+5. Produce a result in xml format named results.xml;
 6. Use xml_writer.rb
 6.1 xml_writer ->
 "require 'builder'

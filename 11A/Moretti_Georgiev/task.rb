@@ -2,7 +2,8 @@ class Task
 	
 	@template = ""
 	
-	def initialize template
+	def initialize template, taskNumber
+		@taskNumber = taskNumber
 		@template = template
 		@contexts = init_contexts
 	end
@@ -17,7 +18,14 @@ class Task
 		File.open("tests/#{sample}_#{context[:task_number]}.txt","w") do |file|
 			file.write(eruby.evaluate(context))
 		end	
-		File.open("expects/#{context[:task_number]}.csv","w") do |file|
+		case @taskNumber 
+			when 1 then format = "csv"
+			when 2 then format = "xml"
+			when 3 then format = "json"
+		else 
+			"Wrong file format"
+		end
+		File.open("expects/#{context[:task_number]}.#{format}","w") do |file|
 			file.write(context[:expected])
 		end	
 	end

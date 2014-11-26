@@ -1,5 +1,4 @@
-require 'csv'
-require_relative 'json_writer.rb'
+require_relative 'xml_writer.rb'
 student = Hash.new
 
 Dir.glob("#{ARGV[0]}/**/*_*_*_*.rb").each do |directory| 
@@ -12,6 +11,6 @@ Dir.glob("#{ARGV[0]}/**/*_*_*_*.rb").each do |directory|
 	end
 end
 
-writer = JSONWriter.new()
+writer = XMLWriter.new()
 
 writer.write(student)

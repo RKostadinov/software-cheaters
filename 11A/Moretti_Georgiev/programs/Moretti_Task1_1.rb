@@ -1,4 +1,3 @@
-require 'csv'
 require_relative 'csv_writer.rb'
 student = Hash.new()
 
@@ -7,8 +6,6 @@ Dir.glob("#{ARGV[0]}/**/*_*_*_*.rb").each do |directory|
 	lastName 	= directory.split("/").last.split("_", 2).last.split("_").first.capitalize
 	digits = directory.split("_").last.split(".").first.to_i
 	if firstName.length > 3 && digits.odd?
-
-		p firstName
 		student[firstName] = lastName
 	end
 end
