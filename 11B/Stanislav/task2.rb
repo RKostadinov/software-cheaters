@@ -23,7 +23,7 @@ Dir.glob("#{ARGV[0]}/**/*.*").each do |raw_file|
 	file = File.open("#{raw_file}")
 	file_read = file.readlines
 	file_read.each do |line|
-		words = line.split(" ").each do |word|
+		line.split(" ").each do |word|
 			if word == "software"
 				i += 1
 				count_hash[filename] = i
