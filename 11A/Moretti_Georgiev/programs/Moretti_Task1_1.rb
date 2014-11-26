@@ -1,3 +1,7 @@
+#you are given class014_homeweork
+#find all the programs which length is more than 3 and the number of the student is odd
+#all the files should be of type firstname_lastname_class_digits
+#write in csv using csv_writer.rb
 require_relative 'csv_writer.rb'
 student = Hash.new()
 
