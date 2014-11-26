@@ -18,7 +18,7 @@ Dir.glob("#{ARGV[0]}/**/*.*").each do |raw_file|
 	end
 end
 
-file_hash.sort_by{|key,val| val}
+file_hash = file_hash.sort_by{|key,val| val}
 
 CSV.open("result.csv","w") do |csv|
 	file_hash.each do |key,value|
