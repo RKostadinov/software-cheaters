@@ -1,0 +1,3 @@
+zadachite tuka sa mnogo grubo napisani, ne kopiraite 100%, tova e prosto g/d kakvo trqbva da se pravi
+
+EDIT: a da i ne sortiraite hasha/arraya i se molete na alah unixa da gi sortira kato expected
