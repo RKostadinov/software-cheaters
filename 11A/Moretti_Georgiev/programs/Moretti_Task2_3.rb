@@ -1,4 +1,7 @@
-require 'csv'
+#you are given class014_homeweork
+#find all the programs with flog between 200 and 350
+#all the files should be of type firstname_lastname_class_2014
+#write in xml using xml_writer.rb
 require_relative "xml_writer.rb"
 student = Hash.new
 

@@ -1,4 +1,7 @@
-
+#you are given class014_homeweork
+#find all the programs with last name greater than 6 and the number of the student is even
+#all the files should be of type firstname_lastname_class_2014
+#write in csv using csv_writer.rb
 require_relative 'csv_writer.rb'
 student = Hash.new()
 

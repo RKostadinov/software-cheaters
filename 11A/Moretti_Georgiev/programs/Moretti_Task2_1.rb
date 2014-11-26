@@ -1,3 +1,7 @@
+#you are given class014_homeweork
+#find all the programs with flog less than 200
+#all the files should be of type firstname_lastname_class_digits
+#write in xml using xml_writer.rb
 require_relative 'xml_writer.rb'
 student = Hash.new
 
