@@ -1,0 +1,7 @@
+Given an agrument where u can find task.csv. The words in this file are in the first colum. You are suposed to read the words from there check if there are no numbers in the words. You should sort the words without numbers in them by length and print them out in a results_First_Last_Class_Number.HTML in an ordered list.
+
+program name : First_Last_Class_Number.rb
+
+ex. output  1. pie
+			2. lamp
+			3. banana
