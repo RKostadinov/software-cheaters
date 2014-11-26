@@ -50,3 +50,16 @@ File.open("results.xml","w") do |xml|
 	end
 	xml.write("</results>")
 end
+
+#na json uslovieto e da se tursi tues i se sortva v ASC
+
+k = 0 #s k pochva da slaga zapetai ot vtoriq element, naburzo go izmislih ako nqkoi ima po-dobur variant da mi go edit
+File.open("results.json","w") do |json|
+	count_hash.each do |key,value|
+		if k >= 1
+			json.write(",")
+		end
+		json.write("\"#{key}\":#{value}")
+		k += 1
+	end
+end
