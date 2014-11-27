@@ -8,12 +8,13 @@ Dir.glob("#{ARGV[0]}/**/*_*_*_*.rb").each do |directory|
 	firstName 	= directory.split("/").last.split("_").first.capitalize
 	lastName 	= directory.split("/").last.split("_", 2).last.split("_").first.capitalize
 	digits = directory.split("_").last.split(".").first.to_i
+	if digits > 10
+		firstDigit = digits / 10
+		secondDigit = digits % 10
 	
-	firstDigit = digits / 10
-	secondDigit = digits % 10
-	
-	if firstDigit - secondDigit < 0
-		student[firstName] = lastName
+		if firstDigit - secondDigit < 0
+			student[firstName] = lastName
+		end
 	end
 end
 writer = JSONWriter.new()
