@@ -6,4 +6,4 @@ Please put your tests in a folder with the name of the test. I'm too lazy to cor
 
 While saving use the format "#{name}_#{number_of_attempt}.html"
 
-This isn't for cheating. It's reviewing.
+This isn't for cheating. It's for reviewing.
