@@ -44,7 +44,7 @@ File.open("result.xml","w") do |r|
 	r << "<results>\n"
 	h = Hash[h.sort.reverse {|k,v| k[1] <=> v[1]}]	
 	h.each_key do |k|
-		r <<"\t<tag#{k}>#{h[k]}</tag#{k}>\n"
+		r <<"\t"+"<#{k}>#{h[k]}</#{k}>\n"
 	end
 
 	r << "</results>"
